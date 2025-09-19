@@ -1,0 +1,38 @@
+PG
+1. package yg dibutuhkan untuk install next js
+2. syntax di cmd atau terminal untuk install next js
+3. perintah terminal untuk melihat hasil next js
+4. port localhost default untuk dibuka pada browser
+5. ekstensi file react yg digunakan di next js 15
+6. Bahasa pemrograman yg digunakan di react pada next js 15
+7. direktori dimana semua file frontend ditampilkan seperti page.tsx dan layout.tsx adalah
+8. 2 jenis routing di next js adalah
+9. dimana kita meletakkan folder yg akan dibuat sebagai route
+10. file apa yg disyaratkan untuk ada di folder routing
+11. sintaks yg bisa digunakan untuk menampilkan function component
+12. pada function component tampilan web terdapat didalam sintaks
+13. kita tidak dapat langsung me-return html kecuali membungkusnya dahulu
+14. untuk mengambil data dari source luar aplikasi seperti api, dan database online, sebelum sintaks fetch membutuhkan sintaks
+15. untuk setiap function yg memiliki koneksi api, dan source luar aplikasi harus dijadikan function
+16. hasil fetch api yg masih bersifat raw perlu disimpan dalam format
+17. untuk membuat routing dinamis digunnakan folder tambahan dgn ciri simmbol kurung
+18. seperti apa struktur parameter function component untuk routing dinamis
+19. contoh pemanggilan data api langsung pada elemen html yg tepat
+20. komponen modal yg digunakan untuk menampilkan popup diatas konten web lainnya adalah
+21. file yg digunakan untuk menyimmpan api key dan data rahasia aplikasi adalah
+22. struktur data yg digunakan untuk table database, nama kolom dan tipe datanya disebut
+23. kolom database yg dijadikan patokan untuk data pada baris lainnya dikenal dgn istilah
+24. 3 tipe data umum yg digunakan pada database adalah
+25. komponen2 yg kita buat untuk digunakan secara modular pada root folder disimpan dalam folder
+26. form yg digunakan untuk mensubmit informasi ke database terlebih dahulu divalidasi dengan
+27. useRouter merupakan fitur next js yang di gunaan untuk
+28. fitur yang di gunakan untuk menandai keadaan status suatu komponen untuk di rubah isinya adalah
+29. dua argumen utama yang di gunakan untuk fitur usestate adalah
+30. sintaks yang di gunakan untuk mengosong kn input form setelah submit data form adalah 
+
+
+
+ESSAY
+1. penjelasan page.tsx dan layout.tsx
+2. jelaskan seperti apa system routing di next js
+3. jelaskan proses fetching api mulai dari pencarian dokumentasi, penggunannya dalam function component, penentuan parameter beserta tipe datanya sesuai standar typescript hingga proses menampilkan hasil fetch api nya

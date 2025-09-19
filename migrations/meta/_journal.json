@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1753760499103,
+      "tag": "0000_military_eddie_brock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1754278019922,
+      "tag": "0001_massive_magus",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1754278394397,
+      "tag": "0002_sad_captain_universe",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755654934835,
+      "tag": "0003_free_karma",
+      "breakpoints": true
+    }
+  ]
+}

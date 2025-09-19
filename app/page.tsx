@@ -55,7 +55,7 @@ function Navbar() {
         </nav>
 
         <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
-          Get started <ArrowRight className="ml-2 h-4 w-4" />
+          Get<ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </header>
@@ -171,7 +171,6 @@ export function Footer() {
 export default function Page() {
   return (
     <main className="bg-white">
-      <Navbar />
       <Hero />
       <Features />
       <Footer />

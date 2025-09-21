@@ -51,7 +51,7 @@ export default  async function TableAdmin() {
       <TableCell>{user.createdAt?.toLocaleString()}</TableCell>
       <TableCell>{user.updatedAt?.toLocaleString()}</TableCell>
       <TableCell className="text-right">
-        <TombolHapusData />
+        {/* <TombolHapusData /> */}
       </TableCell>
     </TableRow> 
     ))}

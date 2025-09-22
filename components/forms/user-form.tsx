@@ -22,6 +22,7 @@ import { toast } from "sonner"
 import { z } from "zod"
 // import DropdownSurat from "../combobox/dropdown-surat"
 import DropdownAyat from "../combobox/dropdown-ayat"
+import DropdownSurat from "../combobox/dropdown-surat"
 interface TipeDataDrSkemaUser{
     user?:User
 }
@@ -147,13 +148,14 @@ export default function UserForm(
                 <FormItem>
                   <FormLabel>Surat</FormLabel>
                   <FormControl>
-                   {/* <DropdownSurat
-                  suratTerpilih={field.value?.toString() || ""}
-                  suratYgBerubah={(nomorSurat) => {
-                    const noSuratUtkNeon = parseInt(nomorSurat, 10)
-                    field.onChange(noSuratUtkNeon)
-                  }}
-                /> */}
+                   <DropdownSurat
+                     suratTerpilih={field.value?.toString() || ""}
+                     suratYgBerubah={(nomorSurat) => {
+                       const noSuratUtkNeon = parseInt(nomorSurat, 10)
+                       field.onChange(noSuratUtkNeon)
+                     }}
+                   />
+
 
                   </FormControl>
                   {/* <FormDescription>

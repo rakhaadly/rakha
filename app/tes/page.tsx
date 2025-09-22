@@ -1,23 +1,22 @@
-"use client" //wajib use client di komponen yg menggunakan useState / useEffect
-
-import { DropDowAyat } from '@/components/combobox/dropdown-ayat'
+"use client"
+import  DropdownAyat  from '@/components/combobox/dropdown-ayat'
 import DropdownSurat from '@/components/combobox/dropdown-surat'
 import React from 'react'
 
 export default function page() {
-  const [valueSurat,setValueSurat] = React.useState("1") //menentukan default surat = "1"
-  const [valueAyat,setValueAyat] = React.useState("1")
+  const [valueSurat, setValueSurat] = React.useState('1')
+  const [valueAyat, setValueAyat] = React.useState('1')
   return (
     <div>
-            <DropdownSurat 
-              suratTerpilih={valueSurat}
-              suratYgBerubah={(suratYgUpdate) => {setValueSurat(suratYgUpdate)}}
-            />
-            <DropDowAyat
-              valueSurat={valueSurat}
-              ayatTerpilih={valueAyat}
-              ayatYgBerubah={(nomorAyat)=>setValueAyat(nomorAyat.toString())}
-            />
+      <DropdownSurat 
+        suratTerpilih={valueSurat}
+        suratYgBerubah={(suratyangupdate) => setValueSurat(suratyangupdate)}
+      />
+      <DropdownAyat 
+        valueSurat={valueSurat}
+        ayatTerpilih={valueAyat}
+        ayatYgBerubah={(nomorayat) => setValueAyat(nomorayat.toString())}
+      />  
     </div>
   )
 }

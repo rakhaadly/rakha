@@ -60,10 +60,17 @@ export function LoginForm({
 
 
     const signInWithGoogle = async () => {
-      const data = await authClient.signIn.social({
-        provider: "google",
-        callbackURL: "/dashboard" //mengarahkan ke dashboard bila berhasil login dengan google
-      });
+      setIsLoading(true)
+      try {
+        const data = await authClient.signIn.social({
+          provider: "google",
+          callbackURL: "/dashboard" //mengarahkan ke dashboard bila berhasil login dengan google
+        })
+      } catch (_) {
+      }finally {
+        setIsLoading(false)
+        
+      }
     };
 
 
@@ -155,8 +162,9 @@ export function LoginForm({
                 {/* isi button = jika state nya is Loading jadi icon spinner bila tidak tulisan login */}
                 {isLoading ? (<Loader2 className="size-4 animate-spin" />) : ("Login") }
               </Button>
-              <Button type="button" onClick={signInWithGoogle} variant="outline" className="w-full">
-                Login with Google
+              <Button type="button" disabled={isLoading} onClick={signInWithGoogle} variant="outline" className="w-full">
+              {isLoading ? (<Loader2 className="size-4 animate-spin" />) :
+              "Login with Google" }
               </Button>
             </div>
           </div>

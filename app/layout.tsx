@@ -34,7 +34,7 @@ function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden gap-8 md:flex">
+        {/* <nav className="hidden gap-8 md:flex">
           <a href="#About" className="text-sm text-gray-700 hover:text-yellow-600 transition">
             About
           </a>
@@ -44,7 +44,7 @@ function Navbar() {
           <a href="#faq" className="text-sm text-gray-700 hover:text-yellow-600 transition">
             FAQ
           </a>
-        </nav>
+        </nav> */}
         <Link href="/login">
           <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
             Log In<ArrowRight className="ml-2 h-4 w-4" />

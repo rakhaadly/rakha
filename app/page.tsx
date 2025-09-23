@@ -136,7 +136,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <p className="text-sm md:text-base text-center md:text-left">
-            © {new Date().getFullYear()} Built by Rakha Adly. All rights reserved.
+            © {new Date().getFullYear()} Build by Rakha Adly. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="https://instagram.com/rakhaadly" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-yellow-600">

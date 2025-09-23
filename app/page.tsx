@@ -173,7 +173,7 @@ export default function Page() {
     <main className="bg-white">
       <Hero />
       <Features />
-      <Footer />
+     
     </main>
   );
 }

@@ -45,11 +45,19 @@ function Navbar() {
             FAQ
           </a>
         </nav> */}
-        <Link href="/login">
-          <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
-            Log In<ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </Link>
+         {/* Tombol Login & Signup */}
+        <div className="flex items-center gap-4">
+          <Link href="/login">
+            <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
+              Log In <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+          <Link href="/signup">
+            <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
+              Sign Up <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </header>
   );

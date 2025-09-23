@@ -1,18 +1,5 @@
 
 
-
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  images:{
-    remotePatterns:[{
-      hostname:"https://tse1.mm.bing.net"
-    }]
-  }
-};
-
-export default nextConfig;
 /* membuat aplikasi next js : npx create-nex-app@latest 
  shortcut menampilkan terminal
  routing di  next js

@@ -20,6 +20,9 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+import * as React from "react"
+import { type DateRange } from "react-day-picker"
+import { Calendar } from "@/components/ui/calendar"
 
 import { FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa"
 import { InfiniteSlider } from '@/components/infinite-slider';
@@ -30,62 +33,162 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay },
   viewport: { once: true },
 });
+import { Logo } from '@/components/logo'
+import { Mail, Menu, SendHorizonal, X } from 'lucide-react'
+import Image from 'next/image'
+import { useState } from 'react'
 
-// ✅ Navbar
-function Navbar() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-yellow-300 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto flex h-14 items-center justify-between px-4">
-        <a href="#" className="group inline-flex items-center gap-2">
-          <span className="font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600">
-            Rakha
-          </span>
-        </a>
+const menuItems = [
+    { name: 'Features', href: '#' },
+    { name: 'Solution', href: '#' },
+    { name: 'Pricing', href: '#' },
+    { name: 'About', href: '#' },
+]
 
-        <nav className="hidden gap-8 md:flex">
-          <a href="#About" className="text-sm text-gray-700 hover:text-yellow-600 transition">About</a>
-          <a href="#Portofolio" className="text-sm text-gray-700 hover:text-yellow-600 transition">Portofolio</a>
-          <a href="#faq" className="text-sm text-gray-700 hover:text-yellow-600 transition">FAQ</a>
-        </nav>
+function HeroSection() {
+    const [menuState, setMenuState] = useState(false)
+    return (
+        <>
+            <header>
+               
+            </header>
 
-        <Button className="rounded-full px-5 shadow-md bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600 text-white hover:shadow-lg hover:shadow-yellow-400/50">
-          signup<ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-      </div>
-    </header>
-  );
-}
+            <main>
+                <section className="overflow-hidden">
+                    <div className="relative mx-auto max-w-5xl px-6 py-28 lg:py-20">
+                        <div className="lg:flex lg:items-center lg:gap-12">
+                            <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
+                                <Link
+                                    href="/"
+                                    className="rounded-(--radius) mx-auto flex w-fit items-center gap-2 border p-1 pr-3 lg:ml-0">
+                                    <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">New</span>
+                                    <span className="text-sm">Introduction Tailark Html</span>
+                                    <span className="bg-(--color-border) block h-4 w-px"></span>
 
-// ✅ Hero
-function Hero() {
-  return (
-    <section className="relative overflow-hidden bg-white text-gray-700">
-      <div className="absolute -top-40 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-yellow-200/40 via-yellow-300/30 to-yellow-400/40 blur-3xl" />
-      <div className="container mx-auto px-4 py-24 text-center md:py-32">
-        <motion.h1
-          className="mx-auto max-w-4xl text-5xl font-extrabold tracking-tight md:text-7xl text-gray-900"
-          {...fadeUp(0)}
-        >
-          Rakha Adly<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-600">
-            Irsyad
-          </span>
-        </motion.h1>
+                                    <ArrowRight className="size-4" />
+                                </Link>
 
-        <motion.p
-          className="mx-auto mt-5 max-w-2xl text-lg text-gray-600"
-          {...fadeUp(0.15)}
-        >
-          I’m Rakha Adly, a student at Boarding Rumah IT Imam Nafi, with a strong passion for web development and building clean, production-ready digital experiences.
-        </motion.p>
-      </div>
-    </section>
-  );
+                                <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">"Rakha Adly Irsyad – High School Programmer"</h1>
+                                <p className="mt-8">Error totam sit illum. Voluptas doloribus asperiores quaerat aperiam. Quidem harum omnis beatae ipsum soluta!</p>
+
+                                <div>
+                                    <form
+                                        action=""
+                                        className="mx-auto my-10 max-w-sm lg:my-12 lg:ml-0 lg:mr-auto">
+                                        <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
+                                            <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
+
+                                            <input
+                                                placeholder="Your mail address"
+                                                className="h-14 w-full bg-transparent pl-12 focus:outline-none"
+                                                type="email"
+                                            />
+
+                                            <div className="md:pr-1.5 lg:pr-0">
+                                                <Button
+                                                    aria-label="submit"
+                                                    className="rounded-(--radius)">
+                                                    <span className="hidden md:block">Get Started</span>
+                                                    <SendHorizonal
+                                                        className="relative mx-auto size-5 md:hidden"
+                                                        strokeWidth={2}
+                                                    />
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <ul className="list-inside list-disc space-y-2">
+                                        <li>Faster</li>
+                                        <li>Modern</li>
+                                        <li>100% Customizable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="absolute inset-0 -mx-4 rounded-3xl p-3 lg:col-span-3">
+                            <div className="relative">
+                                <div className="bg-radial-[at_65%_25%] to-background z-1 -inset-17 absolute from-transparent to-40%"></div>
+                                <Image
+                                    className="hidden dark:block"
+                                    src="/batik.png"
+                                    alt="app illustration"
+                                    width={2796}
+                                    height={2008}
+                                />
+                                <Image
+                                    className="dark:hidden"
+                                    src="/batik.png"
+                                    alt="app illustration"
+                                    width={2796}
+                                    height={2008}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </>
+    )
 }
 
 // ✅ IntegrationsSection dengan Tools
 // ✅ IntegrationsSection dengan Tools warna gold + bg putih
 // ✅ IntegrationsSection dengan Tools warna gold + gradasi putih
+
+
+
+
+
+
+export function Calendar04() {
+  const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
+    from: new Date(2025, 5, 9),
+    to: new Date(2025, 5, 26),
+  })
+
+  const [time, setTime] = React.useState<string>("")
+
+  React.useEffect(() => {
+    const tick = () => {
+      setTime(
+        new Date().toLocaleTimeString("id-ID", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        })
+      )
+    }
+    tick() // set waktu awal
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
+  }, [])
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex items-center gap-8">
+        {/* Kalender */}
+        <Calendar
+          mode="range"
+          defaultMonth={dateRange?.from}
+          selected={dateRange}
+          onSelect={setDateRange}
+          className="rounded-lg border shadow-sm"
+        />
+
+        {/* Jam */}
+        <div className="rounded-lg border shadow-sm p-6 text-center">
+          <div className="text-sm text-muted-foreground">Waktu Sekarang</div>
+          <div className="mt-2 text-3xl font-mono font-semibold">{time}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+
 function IntegrationsSection() {
   return (
     <section className="bg-white py-24 md:py-32">
@@ -134,9 +237,11 @@ function IntegrationsSection() {
           {/* Center Icon */}
           <div className="absolute inset-0 m-auto flex size-fit justify-center gap-2">
             <IntegrationCard
-              className="shadow-black-950/10 size-20 bg-gradient-to-br from-white  shadow-xl border
+              className="shadow-black-950/10 size-20 bg-gradient-to-br from-white  shadow-xl border 
+            
               backdrop-blur-md backdrop-grayscale hover:scale-110 transition-all duration-300 dark:shadow-white/15"
               isCenter={true}
+              
             >
               <LogoIcon className="text-gray-900" /> 
             </IntegrationCard>
@@ -200,7 +305,85 @@ export function Footer() {
   )
 }
  
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Settings2, Sparkles, Zap } from 'lucide-react'
+import { ReactNode } from 'react'
 
+ function Features() {
+    return (
+        <section className="py-16 md:py-32">
+            <div className="@container mx-auto max-w-5xl px-6">
+                <div className="text-center">
+                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built to cover your needs</h2>
+                    <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.</p>
+                </div>
+                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 dark:[--color-muted:var(--color-zinc-900)]">
+                    <Card className="group border-0 shadow-none">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Zap
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">Customizable</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="text-sm">Extensive customization options, allowing you to tailor every aspect to meet your specific needs.</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="group border-0 shadow-none">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Settings2
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">You have full control</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="mt-3 text-sm">From design elements to functionality, you have complete control to create a unique and personalized experience.</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="group border-0 shadow-none">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Sparkles
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">Powered By AI</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="mt-3 text-sm">Elements to functionality, you have complete control to create a unique experience.</p>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+const CardDecorator = ({ children }: { children: ReactNode }) => (
+    <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-36 duration-200 [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
+        <div
+            aria-hidden
+            className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] dark:opacity-50"
+        />
+
+        <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">{children}</div>
+    </div>
+)
 function LogoCloud() {
     return (
         <section className="bg-background overflow-hidden py-16">
@@ -271,23 +454,21 @@ function LogoCloud() {
                                 />
                             </div>
                            <div className="flex">
-  <img
-    className="mx-auto h-16 w-auto"
-    src="/darzan.png"
-    alt="Darzan Frozen Food Logo"
-    height="64"
-    width="auto"
-  />
-</div>
-
-
-                            <div className="flex">
+                                  <img
+                                    className="mx-auto h-16 w-auto"
+                                    src="/darzan.png"
+                                    alt="Darzan Frozen Food Logo"
+                                    height="64"
+                                    width="auto"
+                                  />
+                                </div>
+                             <div className="flex">
                                 <img
                                      className="mx-auto h-25 w-auto"
-    src="/diva.png"
-    alt="Darzan Frozen Food Logo"
-    height="64"
-    width="auto"
+                                  src="/diva.png"
+                                  alt="Darzan Frozen Food Logo"
+                                  height="64"
+                                  width="auto"
                                 />
                             </div>
                         </InfiniteSlider>
@@ -314,9 +495,12 @@ function LogoCloud() {
 export default function Page() {
   return (
     <main className="bg-white">
-      <Hero />
+     <HeroSection />
+       <Features />
+       <Calendar04 />
       <IntegrationsSection />
       <LogoCloud />
+      <Footer />
     </main>
   );
 }

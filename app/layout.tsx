@@ -3,10 +3,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
-import { Footer } from "./page";
+// import { Footer } from "./page";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Footer } from "react-day-picker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -46,102 +46,80 @@ const menuItems = [
 ]
 
 function HeroSection() {
-    const [menuState, setMenuState] = useState(false)
-    return (
-        <>
-            <header>
-               
-            </header>
+  const [menuState, setMenuState] = useState(false)
+  return (
+    <section className="relative w-screen overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-5xl px-6 py-28 lg:py-20">
+        <div className="lg:flex lg:items-center lg:gap-12">
+          {/* Text Content */}
+          <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
+            <Link
+              href="/"
+              className="rounded-(--radius) mx-auto flex w-fit items-center gap-2 border p-1 pr-3 lg:ml-0">
+              <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">New</span>
+              <span className="text-sm">Introduction Tailark Html</span>
+              <span className="bg-(--color-border) block h-4 w-px"></span>
+              <ArrowRight className="size-4" />
+            </Link>
 
-            <main>
-                <section className="overflow-hidden">
-                    <div className="relative mx-auto max-w-5xl px-6 py-28 lg:py-20">
-                        <div className="lg:flex lg:items-center lg:gap-12">
-                            <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
-                                <Link
-                                    href="/"
-                                    className="rounded-(--radius) mx-auto flex w-fit items-center gap-2 border p-1 pr-3 lg:ml-0">
-                                    <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">New</span>
-                                    <span className="text-sm">Introduction Tailark Html</span>
-                                    <span className="bg-(--color-border) block h-4 w-px"></span>
+            <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">
+              Rakha Adly Irsyad | High School Programmer
+            </h1>
+            <p className="mt-8">
+              Error totam sit illum. Voluptas doloribus asperiores quaerat aperiam.
+              Quidem harum omnis beatae ipsum soluta!
+            </p>
 
-                                    <ArrowRight className="size-4" />
-                                </Link>
+            <form
+              action=""
+              className="mx-auto my-10 max-w-sm lg:my-12 lg:ml-0 lg:mr-auto">
+              <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
+                <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
+                <input
+                  placeholder="Your mail address"
+                  className="h-14 w-full bg-transparent pl-12 focus:outline-none"
+                  type="email"
+                />
+                <div className="md:pr-1.5 lg:pr-0">
+                  <Button aria-label="submit" className="rounded-(--radius)">
+                    <span className="hidden md:block">Get Started</span>
+                    <SendHorizonal
+                      className="relative mx-auto size-5 md:hidden"
+                      strokeWidth={2}
+                    />
+                  </Button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-                                <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">"Rakha Adly Irsyad – High School Programmer"</h1>
-                                <p className="mt-8">Error totam sit illum. Voluptas doloribus asperiores quaerat aperiam. Quidem harum omnis beatae ipsum soluta!</p>
+      {/* Full Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          className="w-full h-full object-cover"
+          src="/batik.jpg"
+          alt="app illustration"
+          width={2796}
+          height={2008}
+          priority
+        />
+      </div>
 
-                                <div>
-                                    <form
-                                        action=""
-                                        className="mx-auto my-10 max-w-sm lg:my-12 lg:ml-0 lg:mr-auto">
-                                        <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
-                                            <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
-
-                                            <input
-                                                placeholder="Your mail address"
-                                                className="h-14 w-full bg-transparent pl-12 focus:outline-none"
-                                                type="email"
-                                            />
-
-                                            <div className="md:pr-1.5 lg:pr-0">
-                                                <Button
-                                                    aria-label="submit"
-                                                    className="rounded-(--radius)">
-                                                    <span className="hidden md:block">Get Started</span>
-                                                    <SendHorizonal
-                                                        className="relative mx-auto size-5 md:hidden"
-                                                        strokeWidth={2}
-                                                    />
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                    <ul className="list-inside list-disc space-y-2">
-                                        <li>Faster</li>
-                                        <li>Modern</li>
-                                        <li>100% Customizable</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="absolute inset-0 -mx-4 rounded-3xl p-3 lg:col-span-3">
-                            <div className="relative">
-                                <div className="bg-radial-[at_65%_25%] to-background z-1 -inset-17 absolute from-transparent to-40%"></div>
-                                <Image
-                                    className="hidden dark:block"
-                                    src="/batik.png"
-                                    alt="app illustration"
-                                    width={2796}
-                                    height={2008}
-                                />
-                                <Image
-                                    className="dark:hidden"
-                                    src="/batik.png"
-                                    alt="app illustration"
-                                    width={2796}
-                                    height={2008}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </>
-    )
+      {/* Overlay biar teks tetap terbaca */}
+      <div className="absolute inset-0 bg-black/40"></div>
+    </section>
+  )
 }
 
-// ✅ IntegrationsSection dengan Tools
-// ✅ IntegrationsSection dengan Tools warna gold + bg putih
-// ✅ IntegrationsSection dengan Tools warna gold + gradasi putih
 
 
 
 
 
 
-export function Calendar04() {
+function Calendar04() {
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
     from: new Date(2025, 5, 9),
     to: new Date(2025, 5, 26),
@@ -236,15 +214,20 @@ function IntegrationsSection() {
 
           {/* Center Icon */}
           <div className="absolute inset-0 m-auto flex size-fit justify-center gap-2">
-            <IntegrationCard
-              className="shadow-black-950/10 size-20 bg-gradient-to-br from-white  shadow-xl border 
-            
-              backdrop-blur-md backdrop-grayscale hover:scale-110 transition-all duration-300 dark:shadow-white/15"
-              isCenter={true}
-              
-            >
-              <LogoIcon className="text-gray-900" /> 
-            </IntegrationCard>
+           <IntegrationCard
+  className="shadow-black-950/30 size-15 bg-gradient-to-br from-white shadow-xl border
+  backdrop-blur-md backdrop-grayscale hover:scale-110 transition-all duration-300 dark:shadow-white/15"
+  isCenter={true}
+>
+  <Image
+    src="/logo-r.png"
+    alt="Custom Logo"
+    width={40}
+    height={40}
+    className="rounded-lg"
+  />
+</IntegrationCard>
+
           </div>
         </div>
 
@@ -279,7 +262,7 @@ const IntegrationCard = ({ children, className, isCenter = false }:
 }
 
 // ✅ Footer
-export function Footer() {
+ function Footer() {
   return (
     <footer className="bg-white border-t border-yellow-200 text-gray-600">
       <div className="mx-auto max-w-7xl px-6 py-10">

@@ -26,7 +26,7 @@ export default  async function TableAdmin() {
     }
   return (
 <Table>
-  <TableCaption>Aplikasi Tahfidz Imam Nafi'</TableCaption>
+  <TableCaption>Aplikasi Tahfidz Imam Nafi$apos;</TableCaption>
   <TableHeader>
     <TableRow>
       
